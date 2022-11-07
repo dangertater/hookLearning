@@ -2,7 +2,7 @@ import React from "react"
 import TooHighOrLow from "./TooHighOrLow.js"
 
 export default function IndyCounterDiv(props) {
-	if (TooHighOrLow(props)) {
+	if (TooHighOrLow(props.counter)) {
 		return <div>one of your numbers is too dam high or low</div>
 	} else {
 		return <div>{JSON.stringify(props.counter)}</div>

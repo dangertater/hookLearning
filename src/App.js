@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react"
 import MiddleMan from "./MiddleMan"
 import TooHighOrLow from "./TooHighOrLow"
+import InputSet from "./input-set"
 function App() {
 	let ref = useRef()
 	let [counter, setCounter] = useState(0)
@@ -17,14 +18,17 @@ function App() {
 	let handlePlusButton = (e) => {
 		setCounter(counter + 1)
 	}
+	let handleSetButton = (e) => {
+		setCounter(counter)
+	}
 
 	return (
 		<>
 			<button onClick={handleMinusButton}>-</button>
 			<span ref={ref}>{counter}</span>
 			<button onClick={handlePlusButton}>+</button>
-			<MiddleMan props={counter} />
-			<TooHighOrLow props={counter} />
+			<MiddleMan counter={counter} />
+			<InputSet />
 		</>
 	)
 }
