@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react"
 
 function App() {
-	let useRef = useRef()
+	let ref = useRef()
 	let counter = 0
 	//will reduce counter by 1
 	let handleMinusButton = () => {}
@@ -11,8 +11,9 @@ function App() {
 	return (
 		<>
 			<button onClick={handleMinusButton}>-</button>
-			<span ref={useRef}>{counter}</span>
+			<span ref={ref}>{counter}</span>
 			<button onClick={handlePlussButton}>+</button>
+      <
 		</>
 	)
 }
