@@ -2,15 +2,12 @@
 //---- eventually with different number modifications
 import React, { useState, useRef } from "react"
 import MiddleMan from "./MiddleMan"
-import TooHighOrLow from "./TooHighOrLow"
 import InputSet from "./input-set"
 function App() {
 	let ref = useRef()
 	let [counter, setCounter] = useState(0)
 	//will reduce counter by 1
-	//q4e, why is this e here necessary? I found it being a 'synthetic event' and that it retrieves
-	//----the value of the (target?)element, but the buttons don't have relevant values...so porque?
-	//----works the same without the e?
+
 	let handleMinusButton = (e) => {
 		setCounter(counter - 1)
 	}
@@ -33,3 +30,5 @@ function App() {
 	)
 }
 export default App
+
+//you will need to use a prop on InputSet that is a callback
